@@ -351,6 +351,9 @@ static NSUInteger const MaxNumberOfVelocities = 5;
         }];
         [self.scrollContentNode runActions:@[move, callback] withKey:ScrollContentMoveActionName];
     }
+    else {
+        [self didFinishScrollingAtPosition:destinationPosition];
+    }
 }
 
 - (void)addVelocityToAverage:(CGPoint)velocity {
